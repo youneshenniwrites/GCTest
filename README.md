@@ -6,4 +6,5 @@
 ##### 2. `cd GCTest`
 ##### 3. `npm install -g expo-cli`
 ##### 4. `yarn add native-base@2.8.0`
-##### 5. `expo start --ios`
+##### 5. `yarn add react-navigation@2.8.0`
+##### 6. `expo start --ios`

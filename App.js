@@ -1,23 +1,33 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import {Icon} from 'native-base'
+import React from 'react'
+import { View, TouchableOpacity } from 'react-native'
+import {createStackNavigator} from 'react-navigation'
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Icon active name='home'>Home</Icon>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
-    );
-  }
-}
+// Screen imports
+import Users from './src/components/Users.js'
+import Stats from './src/components/Stats.js'
+import Posts from './src/components/Posts.js'
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+// App stack: Users, Posts, Stats
+export default createStackNavigator({
+  Users: {
+    screen: Users,
+    navigationOptions: () => ({
+      title: `List of all users`,
+      headerBackTitle: 'Back'
+    }),
   },
-});
+  Posts: {
+    screen: Posts,
+    navigationOptions: () => ({
+      title: `List of posts`,
+    }),
+  },
+  Stats: {
+    screen: Stats,
+    navigationOptions: () => ({
+      title: `Some statistics`,
+    }),
+  },
+})
+
+
