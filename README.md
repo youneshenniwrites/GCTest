@@ -1,2 +1,2 @@
-# npm install -g expo-cli
-# yarn add native-base@2.8.0
+### `npm install -g expo-cli`
+### `yarn add native-base@2.8.0`
